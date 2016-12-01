@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="com.eshop.cart.model" v="2.6.4" sm="false" xs="false" id="_14801033289881" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="ClientePK" abs="false" class="Cliente" visibile="true" minimized="false" rootElement="_14801033289881" id="_1480103535561">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="nombres" id="_14801035503894">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="apellidos" id="_14801035585575">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="edad" id="_14801035650686">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="direccion" id="_14801035729887">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="celular" id="_14801035924378">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1480105096690" visibile="true" name="productoOrdens" id="_148010521461324"/>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_14801035356142">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Cliente.findAll">
+            <jpa:query>Select e from Cliente e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByNombreses">
+            <jpa:query>Select c from Cliente c where c.nombreses=:nombreses</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByApellidos">
+            <jpa:query>Select c from Cliente c where c.apellidos=:apellidos</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByEdad">
+            <jpa:query>Select c from Cliente c where c.edad=:edad</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByDireccion">
+            <jpa:query>Select c from Cliente c where c.direccion=:direccion</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByCelular">
+            <jpa:query>Select c from Cliente c where c.celular=:celular</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ProductoPK" abs="false" class="Producto" visibile="true" minimized="false" rootElement="_14801033289881" id="_1480103798832">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="nombre" id="_148010380842811">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="descripcion" id="_148010422218812">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="listaPrecio" id="_148010422919613">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="ventaPrecio" id="_148010502439814">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="especPrecio" id="_148010502502815">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="envioGratis" id="_148010505103616">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="cantidad" id="_148010506429217">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_14801037988349">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Producto.findAll">
+            <jpa:query>Select e from Producto e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByNombre">
+            <jpa:query>Select e from Producto e where e.nombre=:nombre</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByDescripcion">
+            <jpa:query>Select p from Producto p where p.descripcion=:descripcion</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByListaPrecio">
+            <jpa:query>Select p from Producto p where p.listaPrecio=:listaPrecio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByVentaPrecio">
+            <jpa:query>Select p from Producto p where p.ventaPrecio=:ventaPrecio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByEspecPrecio">
+            <jpa:query>Select p from Producto p where p.especPrecio=:especPrecio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByEnvioGratis">
+            <jpa:query>Select p from Producto p where p.envioGratis=:envioGratis</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Producto.findByCantidad">
+            <jpa:query>Select p from Producto p where p.cantidad=:cantidad</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ProductoOrdenPK" abs="false" class="ProductoOrden" visibile="true" minimized="false" rootElement="_14801033289881" id="_1480105096690">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="cantidad" id="_148010511600420">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="localizacion" id="_148010513289221">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="tiempo" id="_148010514122022">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="promocion" id="_148010516079623">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1480103798832" visibile="true" name="producto" id="_148010522524025"/>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_148010509669118">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="ProductoOrden.findAll">
+            <jpa:query>Select e from ProductoOrden e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ProductoOrden.findByCantidad">
+            <jpa:query>Select p from ProductoOrden p where p.cantidad=:cantidad</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ProductoOrden.findByLocalizacion">
+            <jpa:query>Select p from ProductoOrden p where p.localizacion=:localizacion</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ProductoOrden.findByTiempo">
+            <jpa:query>Select p from ProductoOrden p where p.tiempo=:tiempo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="ProductoOrden.findByPromocion">
+            <jpa:query>Select p from ProductoOrden p where p.promocion=:promocion</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp e="true" loc="BEFORE_PACKAGE">/**
+ * This file was generated by the JPA Modeler
+ */</jpa:snp>
+    <jpa:c>
+        <db u="jdbc:derby://localhost:1527/jpamodeler" n="app" p="app" d="org.apache.derby.jdbc.ClientDriver"/>
+    </jpa:c>
+    <jpa:diagram>
+        <plane elementRef="_14801033289881">
+            <shape elementRef="_1480103535561">
+                <Bounds x="74.0" y="147.0" width="146.0" height="210.0"/>
+            </shape>
+            <shape elementRef="_1480103798832">
+                <Bounds x="678.0" y="120.0" width="148.0" height="218.0"/>
+            </shape>
+            <shape elementRef="_1480105096690">
+                <Bounds x="379.0" y="325.0" width="183.0" height="189.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
